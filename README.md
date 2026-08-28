@@ -1,8 +1,8 @@
-A bunch of projects I made in sophomore/freshman year of highschool. Some of the images don't work anymore but the core functionality of each app is fine.
+A bunch of projects I made in sophomore/freshman year of highschool using Code.org's AppLab. Some of the images don't show up because the sources I used for them no longer exist, but the core functionality of each app is fine.
 
 # LINKS (because the actual files are wonky):
 ## Sophomore Projects
-https://studio.code.org/projects/applab/ScFQU4H8pAZaFy_0r5LxuaGdpPbM21ZxdiKXDrelhDc - chess project (MY BEST)
+**https://studio.code.org/projects/applab/ScFQU4H8pAZaFy_0r5LxuaGdpPbM21ZxdiKXDrelhDc - chess project (MY BEST BY FAR)**
 
 https://studio.code.org/projects/applab/b1bcbca8-1525-4ec7-9692-11f9f9cb5c69 - create task
 
