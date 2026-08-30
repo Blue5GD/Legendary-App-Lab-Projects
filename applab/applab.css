@@ -336,47 +336,6 @@ div.droplet-palette-group-header-selected.orange {
   min-height: 25px;
 }
 
-button.arrow {
-  border: 1px solid #ffa000;
-  background-color: #ffa000;
-  color: #fff;
-  margin: 5px 0;
-  margin-inline-end: 9px;
-  display: none;
-}
-
-button.arrow > img {
-  opacity: 1;
-  vertical-align: text-bottom;
-}
-
-button.arrow:disabled {
-  border: 1px solid #D1D4D8;
-  background-color: #D1D4D8;
-  color: #D1D4D8;
-}
-
-#soft-buttons {
-  display: inline-block;
-  vertical-align: top;
-  -webkit-touch-callout: none;
-}
-#soft-buttons.soft-buttons-compact {
-  margin: 0;
-}
-#soft-buttons.soft-buttons-compact button {
-  margin: 0;
-  margin-inline-end: 4px;
-}
-#soft-buttons :last-child {
-  margin-inline-end: 0;
-}
-@supports not (gap: 0 9px) {
-  #soft-buttons {
-    padding-inline-end: 9px;
-  }
-}
-
 .soft-buttons-1 {
   display: table-cell;
   vertical-align: top;
@@ -413,7 +372,7 @@ button.arrow:disabled {
 }
 
 #codeTextbox.pin_bottom {
-  border: 1px solid #ddd;
+  border: 1px solid var(--borders-neutral-strong);
 }
 
 #codeTextbox.has_banner {
@@ -430,7 +389,7 @@ html[dir=rtl] .editor-column {
 
 #codeWorkspace.pin_bottom {
   border: none;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--borders-neutral-strong);
 }
 
 #codeWorkspace.readonly .blocklySvg,
@@ -520,7 +479,7 @@ html[dir=rtl] #codeTextbox .droplet-palette-scroller {
   left: 400px;
   cursor: ew-resize;
   text-align: center;
-  color: #c6cacd;
+  color: var(--borders-neutral-strong);
   font-size: 24px;
   line-height: 400px;
 }
@@ -804,7 +763,6 @@ html[dir=RTL] #studio-dpad-container.responsive > * {
   }
 }
 /* Buttons */
-button,
 label.img-upload {
   margin: 5px;
   padding: 10px;
@@ -813,140 +771,6 @@ label.img-upload {
   font-size: large;
   background-color: #eee;
   color: #000;
-}
-
-button.launch {
-  border: 1px solid #ffa400;
-  background-color: #ffa400;
-  color: #fff;
-  font-size: large;
-  min-width: 96px;
-  margin-left: 0;
-  margin-right: 10px;
-  /* Can't use "text-align: start" due to IE. */
-  text-align: left;
-}
-
-button.launch[disabled] {
-  pointer-events: none;
-}
-
-html[dir=RTL] button.launch {
-  text-align: right;
-}
-
-button.launch > img {
-  opacity: 1;
-  vertical-align: text-bottom;
-}
-
-button.blocklyLaunch {
-  display: inline-block;
-  border: 1px solid #ffa400;
-  background-color: #ffa400;
-  padding: 7px 10px 7px 6px;
-  /* Can't use "text-align: start" due to IE. */
-  text-align: left;
-}
-button.blocklyLaunch.hide {
-  display: none;
-}
-@media screen and (min-width: 1051px) {
-  button.blocklyLaunch {
-    min-width: 111px;
-  }
-}
-button.blocklyLaunch img {
-  float: left;
-  margin-top: 0;
-  margin-left: 6px;
-}
-button.blocklyLaunch div {
-  text-align: left;
-  margin-top: 3px;
-  margin-right: 4px;
-  float: right;
-  padding: 0;
-  margin-left: 6px;
-}
-@media screen and (min-width: 1051px) {
-  button.blocklyLaunch div {
-    min-width: 45px;
-  }
-}
-html[dir=RTL] button.blocklyLaunch {
-  margin-right: 0;
-}
-button.blocklyLaunch#resetButton {
-  border: 1px solid #8C52BA;
-  background-color: #8C52BA;
-}
-button.blocklyLaunch#resetButton:hover {
-  background-color: #6C468A;
-  border-color: #6C468A;
-  box-shadow: none;
-}
-button.blocklyLaunch.hideText {
-  width: 42px;
-  height: 42px;
-  min-width: 0;
-  padding: 7px;
-}
-button.blocklyLaunch.hideText img {
-  margin-left: 2px;
-  margin-top: -2px;
-}
-
-button.share {
-  border: 1px solid #ffa000;
-  background-color: #ffa000;
-  color: #fff;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-button.share:focus {
-  outline-style: none;
-}
-
-button:hover > img {
-  opacity: 1;
-}
-
-button:active {
-  border: 1px solid #888 !important;
-}
-
-button:hover {
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-button.disabled,
-button[disabled=disabled],
-button:disabled {
-  border: 1px solid #c7c7c7;
-  background-color: #c7c7c7;
-  box-shadow: none;
-}
-button.disabled:hover,
-button[disabled=disabled]:hover,
-button:disabled:hover {
-  box-shadow: none;
-}
-
-button.disabled:hover > img {
-  opacity: 0.6;
-}
-
-button.disabled {
-  display: none;
-}
-
-button.notext {
-  font-size: 10%;
-}
-
-label.img-upload {
   display: inline-block;
   vertical-align: middle;
 }
@@ -956,11 +780,6 @@ input[type=radio] {
   margin-right: 10px;
 }
 
-@media screen and (max-width: 1050px) {
-  #stepButton {
-    min-width: 0;
-  }
-}
 #learn h1 {
   margin: 20px 0 0 0;
 }
@@ -989,7 +808,7 @@ input[type=radio] {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 0 9px;
+  gap: 0.5rem;
 }
 
 #gameButtons:after {
@@ -999,18 +818,6 @@ input[type=radio] {
   height: 0;
   font-size: 0;
   line-height: 0;
-}
-
-#slider-cell {
-  display: inline-block;
-  vertical-align: top;
-  touch-action: none;
-  -ms-touch-action: none;
-}
-
-#slider {
-  display: inline-block;
-  vertical-align: middle;
 }
 
 #spinner {
@@ -1153,13 +960,13 @@ html[dir=rtl] #puzzleRatingButtons p {
 .prompt-icon-cell {
   vertical-align: top;
   text-align: center;
-  width: 50px;
+  width: 60px;
   padding-right: 10px;
   height: auto;
   /* authored hints */
 }
 .prompt-icon-cell.authored_hints {
-  width: 80px;
+  width: 90px;
 }
 .prompt-icon-cell.authored_hints #prompt-icon {
   padding-top: 20px;
@@ -1235,23 +1042,6 @@ html[dir=RTL] .prompt-icon-cell.authored_hints #lightbulb {
   overflow-x: hidden;
   height: 30px;
   color: white;
-  /* We don't want some of these styles to affect modal content. */
-}
-.workspace-header .workspace-header-clickable:hover {
-  cursor: pointer;
-  color: #ffb81d;
-}
-.workspace-header span {
-  line-height: 30px;
-}
-.workspace-header .fa {
-  font-size: 18px;
-}
-.workspace-header .ml-modal span {
-  line-height: 12px;
-}
-.workspace-header .ml-modal .fa {
-  font-size: 12px;
 }
 .workspace-header.is-running {
   background-color: #cfc9de;
@@ -1286,14 +1076,6 @@ html[dir=RTL] .prompt-icon-cell.authored_hints #lightbulb {
   font-size: 15px;
 }
 
-#settings-header {
-  display: none;
-}
-
-#versions-header {
-  display: none;
-}
-
 #design-headers {
   height: 30px;
   overflow-y: hidden;
@@ -1303,58 +1085,14 @@ html[dir=RTL] .prompt-icon-cell.authored_hints #lightbulb {
   user-select: none;
 }
 
-#headers #show-toolbox-icon,
-#headers #hide-toolbox-icon,
-.purple-header #show-toolbox-icon,
-.purple-header #hide-toolbox-icon {
-  position: absolute;
-  top: 0;
-  left: 8px;
-  line-height: 30px;
-  color: #cfc9de;
-  cursor: pointer;
-}
-#headers #show-toolbox-icon:hover.fa,
-#headers #hide-toolbox-icon:hover.fa,
-.purple-header #show-toolbox-icon:hover.fa,
-.purple-header #hide-toolbox-icon:hover.fa {
-  color: #fff;
-}
-#headers #hide-toolbox-icon,
-.purple-header #hide-toolbox-icon {
-  -moz-transform: scale(-1, 1);
-  -webkit-transform: scale(-1, 1);
-  -o-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
-  transform: scale(-1, 1);
-}
-#headers #toolbox-header,
-.purple-header #toolbox-header {
-  width: 270px;
-  border-right: 1px solid gray;
-  float: left;
-}
-#headers #show-toolbox-header,
-.purple-header #show-toolbox-header {
-  border: 0;
-  float: left;
-  padding: 0 10px;
-  cursor: pointer;
-}
-#headers #show-toolbox-header > span,
-.purple-header #show-toolbox-header > span {
-  margin: auto auto auto 18px;
-}
-#headers #blockCounter,
 #headers #blockUsed,
-.purple-header #blockCounter,
 .purple-header #blockUsed {
   display: inline-block;
 }
 #headers #clear-puzzle-header:hover,
 .purple-header #clear-puzzle-header:hover {
-  background-color: #E5311A;
-  color: #FFFFFF;
+  background-color: var(--background-error-primary);
+  color: var(--text-neutral-white-fixed);
 }
 #headers .block-counter-overflow,
 .purple-header .block-counter-overflow {
@@ -1367,33 +1105,6 @@ html[dir=RTL] .prompt-icon-cell.authored_hints #lightbulb {
 
 #headers[dir=rtl] div {
   margin-right: 0;
-}
-#headers[dir=rtl] #show-toolbox-icon,
-#headers[dir=rtl] #hide-toolbox-icon {
-  left: auto;
-  right: 8px;
-}
-#headers[dir=rtl] #show-toolbox-icon {
-  -moz-transform: scale(-1, 1);
-  -webkit-transform: scale(-1, 1);
-  -o-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
-  transform: scale(-1, 1);
-}
-#headers[dir=rtl] #hide-toolbox-icon {
-  -moz-transform: none;
-  -webkit-transform: none;
-  -o-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-#headers[dir=rtl] #toolbox-header {
-  border-right: 0;
-  border-left: 1px solid gray;
-  float: right;
-}
-#headers[dir=rtl] #show-toolbox-header {
-  float: right;
 }
 #headers[dir=rtl] .workspace-header-button {
   margin-left: 3px;
@@ -1413,9 +1124,6 @@ html[dir=RTL] .prompt-icon-cell.authored_hints #lightbulb {
   padding-right: 0;
   padding-left: 8px;
 }
-#headers[dir=rtl] .show-toolbox-label {
-  margin-right: 20px;
-}
 
 #showVersionsModal {
   width: 700px;
@@ -1432,7 +1140,7 @@ html[dir=RTL] .prompt-icon-cell.authored_hints #lightbulb {
   vertical-align: middle;
 }
 #showVersionsModal tr.highlight {
-  background-color: #ebe8f1;
+  background-color: var(--background-neutral-secondary);
 }
 #showVersionsModal .template-level-warning {
   font-family: var(--font-family-main);
@@ -1502,7 +1210,7 @@ html[dir=rtl] .generated-code-container .generatedCodeMessage {
 .generated-code-container .generatedCodeMessage p {
   font-size: 14px;
   line-height: inherit;
-  color: #292F36;
+  color: var(--text-neutral-primary);
   margin-bottom: 10px;
 }
 .generated-code-container .generatedCodeMessage p.caption-text {
@@ -1510,21 +1218,41 @@ html[dir=rtl] .generated-code-container .generatedCodeMessage {
   font-weight: var(--font-weight-semi-bold);
   font-style: normal;
 }
-.generated-code-container .generatedCodeMessage p a {
-  font-family: var(--font-family-main);
-  font-weight: var(--font-weight-regular);
-  font-style: normal;
-  color: #8C52BA;
-  text-decoration: underline;
-}
-.generated-code-container .generatedCodeMessage p a:hover {
-  color: #6C468A;
-}
 .generated-code-container .generatedCode {
   font-size: 14px;
   overflow: scroll;
-  max-height: 400px;
-  margin: 12px 0;
+  max-height: 340px;
+  margin: 0;
+  background-color: var(--background-neutral-tertiary);
+  color: var(--text-neutral-primary);
+  scrollbar-color: var(--background-neutral-quinary) var(--background-neutral-tertiary);
+}
+.generated-code-container .generatedCode::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: var(--background-neutral-tertiary);
+}
+.generated-code-container .generatedCode::-webkit-scrollbar-thumb {
+  background: var(--background-neutral-quinary);
+  border-radius: 10px;
+}
+.generated-code-container .generatedCode::-webkit-scrollbar-corner {
+  background: var(--background-neutral-tertiary);
+}
+
+#showCodeModal img {
+  background: transparent !important;
+}
+#showCodeModal [class*=modalContentSection] {
+  max-height: 500px !important;
+}
+#showCodeModal .generated-code-container {
+  min-width: 0;
+  max-width: 100%;
+}
+#showCodeModal .generatedCode {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .light-yellow-background {
@@ -1625,14 +1353,14 @@ html[dir=rtl] .generated-code-container .generatedCodeMessage {
   clear: both;
   margin-top: 25px;
   font-size: 18px;
-  color: #5b6770;
+  color: var(--text-neutral-primary);
 }
 #sharing .feedback-image {
-  width: 180px;
-  height: 180px;
+  width: 186px;
+  height: 186px;
   margin: 0;
   float: left;
-  border: #c6cacd;
+  border: var(--borders-neutral-primary);
   border-style: solid;
 }
 html[dir=rtl] #sharing .feedback-image {
@@ -1665,7 +1393,7 @@ html[dir=rtl] #sharing div.sharing-content {
 #sharing .social-buttons a:visited {
   background-color: transparent;
   text-decoration: none;
-  color: white;
+  color: var(--text-neutral-white-fixed);
 }
 html[dir=rtl] #sharing .social-buttons {
   display: flex;
@@ -1674,16 +1402,16 @@ html[dir=rtl] #sharing .social-buttons {
   justify-content: flex-end;
 }
 #sharing button {
-  background-color: #8c52ba;
-  color: white;
+  background-color: var(--background-brand-purple-primary);
+  color: var(--text-neutral-white-fixed);
   font-size: 14px;
   min-width: 40px;
   text-align: center;
   margin: 2px 0;
 }
 #sharing button .disabled, #sharing button[disabled=disabled], #sharing button:disabled {
-  border: 1px solid #8c52ba;
-  background-color: #c6cacd;
+  border: 1px solid var(--borders-brand-purple-primary);
+  background-color: var(--background-neutral-disabled);
   box-shadow: none;
 }
 #sharing #send-to-phone {
@@ -1706,7 +1434,6 @@ html[dir=rtl] #sharing .social-buttons {
 #sharing button.saved-to-gallery {
   font-family: var(--font-family-main);
   font-weight: var(--font-weight-regular);
-  font-style: normal;
   font-style: italic;
 }
 #sharing #sharing-input-container {
@@ -1723,7 +1450,7 @@ html[dir=rtl] #sharing .social-buttons {
   box-sizing: border-box;
 }
 #sharing .sharing-dialog-copy-button-shared {
-  background-color: #a69bc1;
+  background-color: var(--background-brand-purple-hover);
 }
 #sharing #copy-button {
   max-width: 100px;
@@ -1742,7 +1469,7 @@ html[dir=rtl] #sharing .social-buttons {
 #sharing div#phone-charges {
   font-size: 10px;
   margin-top: 0;
-  color: #c00;
+  color: var(--text-error-primary);
 }
 
 .run26 {
@@ -1755,11 +1482,6 @@ html[dir=rtl] #sharing .social-buttons {
   width: 26px;
   height: 26px;
   background: url("assets/blockly/media/common_images/shared-sprites-26x26.png") 0px 26px;
-}
-
-#stepButton {
-  margin-right: 0;
-  text-align: center;
 }
 
 #share-fail-explanation {
@@ -1864,7 +1586,7 @@ body.readonly.embed-block #codeWorkspace .userHidden {
 }
 
 .WireframeButtons_containerLeft {
-  flex: 1 1 372px;
+  flex: 1 1 392px;
   overflow: hidden;
   padding-top: 20px;
   padding-right: 20px;
@@ -1876,7 +1598,7 @@ body.readonly.embed-block #codeWorkspace .userHidden {
 }
 
 .WireframeButtons_containerRight {
-  flex: 1 0 372px;
+  flex: 1 0 392px;
   overflow: hidden;
   padding-top: 20px;
   padding-right: 20px;
@@ -1885,42 +1607,27 @@ body.readonly.embed-block #codeWorkspace .userHidden {
 
 @media (max-width: 845px) {
   .WireframeButtons_containerRight {
-    flex: 1 1 372px;
+    flex: 1 1 392px;
   }
 
   .WireframeButtons_containerLeft {
     flex: 1 1 auto;
   }
 }
-a.WireframeButtons_button {
-  background-color: #8c52ba;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 0.8em;
-  line-height: 3;
+.WireframeButtons_buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
   margin: 5px;
-  padding: 8px;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-a.WireframeButtons_active {
-  cursor: pointer;
-  text-decoration: none;
-  white-space: nowrap;
 }
 
 div.WireframeButtons_active {
+  background-color: var(--background-brand-purple-extra-light);
+  border-radius: 5px;
+  color: var(--text-neutral-primary);
   cursor: default;
   display: inline-block;
-}
-
-a.WireframeButtons_active,
-div.WireframeButtons_active {
-  background-color: #ebe8f1;
-  border-radius: 5px;
-  color: #4d575f;
   font-size: 0.8em;
   line-height: 3em;
   margin: 5px;
@@ -1935,7 +1642,7 @@ div.WireframeButtons_active {
 @media screen and (max-height: 780px) {
   .legacy-share-view div#visualizationColumn.wireframeShare {
     width: 402px !important;
-    height: 602px !important;
+    height: 642px !important;
     background-size: 402px 602px;
   }
   .legacy-share-view div#visualizationColumn.wireframeShare div#phoneFrameScreen {
@@ -1969,7 +1676,7 @@ div.WireframeButtons_active {
 }
 .legacy-share-view #visualizationColumn.wireframeShare {
   width: 432px !important;
-  height: 757px !important;
+  height: 797px !important;
   margin: 0 auto;
   padding: 20px 0;
   overflow: hidden;
@@ -1980,8 +1687,8 @@ div.WireframeButtons_active {
   left: 16px;
   border: solid thin #202b34;
   background-color: #202b34;
-  width: 400px;
-  height: 600px;
+  width: 402px;
+  height: 602px;
 }
 .legacy-share-view #gameButtons {
   width: auto;
@@ -1990,9 +1697,6 @@ div.WireframeButtons_active {
 .legacy-share-view #gameButtons #right-button-cell {
   display: none;
   /* don't show Finish button in share view */
-}
-.legacy-share-view #gameButtons #soft-buttons button {
-  margin: 5px 1px;
 }
 .legacy-share-view .small-footer-base {
   left: 0;
@@ -2017,9 +1721,8 @@ div.WireframeButtons_active {
   padding: 0;
 }
 
-#manageAssetsModal {
+#manageAssetsModal .modal-dialog {
   width: 800px;
-  margin-left: -400px;
 }#debugResizeBar {
   width: 100%;
   height: 13px;
@@ -2030,41 +1733,12 @@ div.WireframeButtons_active {
   cursor: ns-resize;
   white-space: nowrap;
 }
-
-#debug-buttons {
-  display: inline;
-  white-space: normal;
-}
-
-.debugger_button {
-  border: 1px solid #0094ca;
-  background-color: #0094ca;
-  color: #fff;
-  margin-left: 0;
-  margin-right: 3px;
-  padding: 3px 6px;
-  font-size: 14px;
-  min-width: 120px;
-}
-.debugger_button:disabled {
-  cursor: not-allowed;
-}
-.debugger_button:disabled:active {
-  border: none !important;
-}
-
-#continueButton {
-  border-color: #ffa400;
-  background-color: #ffa400;
-}
-
-.debugger_button:focus {
-  outline-style: none;
-}
-
-.debugger_button > img {
-  float: left;
-  opacity: 1;
+#debugResizeBar i {
+  width: 100%;
+  height: 13px;
+  line-height: 13px;
+  font-size: 24px;
+  cursor: ns-resize;
 }
 
 #debug-area {
@@ -2082,11 +1756,11 @@ div.WireframeButtons_active {
 }
 
 #debug-commands-header {
-  width: 270px;
+  width: 271px;
   float: left;
   border-right: 1px solid gray;
 }
-#debug-commands-header .fa {
+#debug-commands-header i {
   margin: 0 0.25em;
 }
 
@@ -2104,7 +1778,7 @@ div.WireframeButtons_active {
 .debug-console,
 .debug-watch {
   display: block;
-  background-color: #fff;
+  background-color: var(--background-neutral-primary);
   border: 1px solid #ddd;
   position: absolute;
   top: 43px;
@@ -2113,13 +1787,14 @@ div.WireframeButtons_active {
 
 .debug-commands {
   left: 0;
-  width: 270px;
+  width: 272px;
   text-align: center;
 }
 
 .debug-watch {
   right: 0;
-  width: 200px;
+  width: 202px;
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 .debug-watch.no-commands {
@@ -2135,8 +1810,6 @@ div.WireframeButtons_active {
 .debug-watch-item {
   margin: 0;
   line-height: 14px;
-  clear: both;
-  margin-bottom: 1px;
 }
 .debug-watch-item .watch-variable,
 .debug-watch-item .watch-separator {
@@ -2164,9 +1837,8 @@ div.WireframeButtons_active {
   font-size: 12px;
 }
 
-#slider-cell {
-  float: left;
-  cursor: default;
+.debug-console input {
+  background-color: inherit;
 }
 
 /* Slider. */
@@ -2189,32 +1861,6 @@ div.WireframeButtons_active {
 
 .sliderKnob:hover {
   fill: #eee;
-}
-
-/* Sprited icons. */
-.pause-btn {
-  background-position: 0 -84px;
-  margin-right: 3px;
-}
-
-.continue-btn {
-  background-position: -21px -84px;
-  margin-right: 3px;
-}
-
-.step-in-btn {
-  background-position: 0 -105px;
-  margin-right: 3px;
-}
-
-.step-out-btn {
-  background-position: -21px -105px;
-  margin-right: 3px;
-}
-
-.step-over-btn {
-  background-position: 0 21px;
-  margin-right: 3px;
 }
 
 #visualizationOverlay {
@@ -2494,6 +2140,7 @@ _:-ms-fullscreen select,
 div#visualization {
   height: 562.5px;
   width: 400px;
+  box-sizing: content-box;
 }
 
 div#visualization.with_padding {
@@ -2729,7 +2376,7 @@ div#visualizationResizeBar {
 #visualizationColumn.wireframeShare {
   max-width: none !important;
   width: 352px;
-  height: 612px;
+  height: 652px;
   margin: 0 auto;
   padding: 20px 0;
   background-size: initial;
@@ -2970,18 +2617,6 @@ div#visualizationResizeBar {
   color: white;
 }
 
-.assetRow {
-  border-bottom: 1px solid #999;
-}
-
-.assetRow:last-child {
-  border-bottom: none;
-}
-
-.assetRow:hover {
-  background: #cfc9de;
-}
-
 .no-outline:focus {
   outline: none;
 }
@@ -3070,29 +2705,4 @@ div#visualizationResizeBar {
 #designModeViz .ui-resizable-s {
   width: calc(100% - 12px);
   bottom: 0;
-}
-
-.theme-dropdown .Select-value {
-  height: 44px;
-}
-.theme-dropdown .Select-value .theme-dropdown-label img {
-  width: 36px;
-  height: 36px;
-}
-.theme-dropdown .Select-value-label .checkbox {
-  visibility: hidden;
-}
-.theme-dropdown .Select-menu,
-.theme-dropdown .Select-menu-outer {
-  height: 70vh;
-  max-height: 70vh;
-  border-bottom: 1px solid #ccc;
-  border-radius: 4px;
-  text-align: center;
-}
-.theme-dropdown .Select-control {
-  height: 44px;
-}
-.theme-dropdown .form-control .Select-arrow-zone {
-  display: table-cell !important;
 }
