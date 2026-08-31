@@ -80,9 +80,7 @@ The original project is hosted on my high school Code.org account. The email add
 
 ### Running Locally
 
-See Code.org's instructions for exporting App Lab projects:
-
-https://support.code.org/hc/en-us/articles/13211665878157-Exporting-Projects-from-App-Lab
+See Code.org's instructions for exporting App Lab projects: https://support.code.org/hc/en-us/articles/13211665878157-Exporting-Projects-from-App-Lab
 
 As the guide states, **you cannot run the project by simply opening the `index.html` file**. Instead, you must run it using a testing server program.
 
